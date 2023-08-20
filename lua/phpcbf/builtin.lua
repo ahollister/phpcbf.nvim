@@ -1,6 +1,6 @@
-local config = require("config")
-local utils = require("utils")
-local format = require("format")
+local config = require("phpcbf.config")
+local utils = require("phpcbf.utils")
+local format = require("phpcbf.format")
 
 local builtin = {}
 

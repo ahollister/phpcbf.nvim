@@ -1,5 +1,5 @@
-local utils = require("utils")
-local config = require("config")
+local utils = require("phpcbf.utils")
+local config = require("phpcbf.config")
 
 local format = {}
 

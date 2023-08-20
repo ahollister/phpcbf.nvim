@@ -1,4 +1,4 @@
-local config = require("config")
+local config = require("phpcbf.config")
 local phpcbf = {}
 local user_opts = {}
 

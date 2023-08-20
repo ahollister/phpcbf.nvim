@@ -1,4 +1,4 @@
-local builtin = require("builtin")
+local builtin = require("phpcbf.builtin")
 
 -- create the PHPCBF command
 vim.api.nvim_create_user_command("PHPCBF", function(opts)
