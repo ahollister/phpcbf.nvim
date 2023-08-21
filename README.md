@@ -28,6 +28,7 @@ require("phpcbf").setup({
 ```
 
 ### Setup options
+---
 
 #### auto_format
 
@@ -56,7 +57,8 @@ Specifies a path for the phpcbf executable that will be used when the `PHPCBF fo
 
 Specifies a ruleset to be passed into the `--standard` argument of the phpcbf command. This can be set to nil or left out of the setup options if you want phpcbf to be run without a `--standard` argument.
 
-### Commands
+## Commands
+---
 
 `:PHPCBF format_phpcbf` - Runs the formatter against the current buffer.
 
