@@ -60,12 +60,12 @@ Specifies a ruleset to be passed into the `--standard` argument of the phpcbf co
 
 `:PHPCBF format_phpcbf` - Runs the formatter against the current buffer.
 
-`:PHPCBF get_phpcbf_path` - Prints the currently set phpcbf_path.
+`:PHPCBF get_phpcbf_path` - Prints the currently set `phpcbf_path`
 
-`:PHPCBF get_phpcbf_ruleset` - Prints the currently set phpcbf_ruleset.
+`:PHPCBF get_phpcbf_ruleset` - Prints the currently set `phpcbf_ruleset`
 
-`:PHPCBF enable_auto_format` - Sets the auto_format option to true.
+`:PHPCBF enable_auto_format` - Sets the `auto_format` option to true.
 
-`:PHPCBF disable_auto_format` - Sets the auto_format option to false.
+`:PHPCBF disable_auto_format` - Sets the `auto_format` option to false.
 
-`:PHPCBF toggle_auto_format` - Toggles the auto_format option.
+`:PHPCBF toggle_auto_format` - Toggles the `auto_format` option.
