@@ -28,7 +28,6 @@ require("phpcbf").setup({
 ```
 
 ### Setup options
----
 
 #### auto_format
 
