@@ -2,7 +2,7 @@
 
 This neovim plugin provides a minimal config and some commands for configuring and running the [PHP Code Beautifier and Fixer (PHPCBF)](https://phpqa.io/projects/phpcbf.html) script against the current buffer.
 
-I mostly built this for my own use, it may grow to include [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) too and if it does I will probably archive this repo and create a new plugin under a more relevant name.
+I mostly built this for my own use, it may grow to include [phpcs](https://github.com/squizlabs/PHP_CodeSniffer)
 
 ## Installation
 ---
