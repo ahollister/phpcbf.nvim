@@ -12,7 +12,9 @@ function format.format_phpcbf()
 	local phpcbf_path = utils.get_phpcbf_path()
 	local file_path = vim.fn.expand("%:p")
 
-	assert(file_path:endswith(".php"), "file is not a php file")
+	if file_path:endswith(".php") == false then
+		return
+	end
 
 	-- If we have phpcbf path
 	if phpcbf_path then
