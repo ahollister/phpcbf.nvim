@@ -3,10 +3,16 @@ local config = require("phpcbf.config")
 
 local format = {}
 
+function string:endswith(suffix)
+	return tostring(self):sub(-#suffix) == suffix
+end
+
 -- Format the current file with phpcbf
 function format.format_phpcbf()
 	local phpcbf_path = utils.get_phpcbf_path()
 	local file_path = vim.fn.expand("%:p")
+
+	assert(file_path:endswith(".php"), "file is not a php file")
 
 	-- If we have phpcbf path
 	if phpcbf_path then
