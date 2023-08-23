@@ -24,12 +24,15 @@ require("phpcbf").setup({
 	auto_format = true,
 	phpcbf_path = "/Users/yourname/.composer/vendor/bin/phpcbf",
 	phpcbf_ruleset = "PSR2",
+    check_file_extension = true,
 })
 ```
 
 ### Setup options
 
 #### auto_format
+
+*Defaults to false.*
 
 Contrary to the name this does not actually format code on save on it's own. It simply sets a variable that defines whether the command `PHPCBF auto_format_phpcbf` should format the code or be blocked from doing so.
 
@@ -50,11 +53,23 @@ With the above in place, the phpcbf script will run after file save, only if `au
 
 #### phpcbf_path
 
+*Defaults to nil.*
+
 Specifies a path for the phpcbf executable that will be used when the `PHPCBF format_phpcbf()` command is run.
 
 #### phpcbf_ruleset
 
+*Defaults to nil.*
+
 Specifies a ruleset to be passed into the `--standard` argument of the phpcbf command. This can be set to nil or left out of the setup options if you want phpcbf to be run without a `--standard` argument.
+
+#### check_file_extension
+
+*Defaults to false.*
+
+If you need to have this plugin explicitly check that the file name of the current buffer ends in .php before formatting, set this option to true.
+
+I'm not sure why this happens, but for some reason the file type plugin [described above](https://github.com/ahollister/phpcbf.nvim#auto_format) seems to occasionally think that non PHP buffers, like the one [oil.nvim](https://github.com/stevearc/oil.nvim) uses for file system manipulations, are PHP? That's what this setting is for.
 
 ## Commands
 ---

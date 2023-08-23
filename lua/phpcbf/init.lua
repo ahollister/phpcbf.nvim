@@ -10,6 +10,7 @@ phpcbf.setup = function(opts)
 		auto_format = opts.auto_format or false,
 		phpcbf_path = opts.phpcbf_path or nil,
 		phpcbf_ruleset = opts.phpcbf_ruleset or nil,
+		check_file_extension = opts.check_file_extension or false,
 	})
 
 	-- Create the PHPCBF command

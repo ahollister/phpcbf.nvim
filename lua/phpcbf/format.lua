@@ -12,7 +12,7 @@ function format.format_phpcbf()
 	local phpcbf_path = utils.get_phpcbf_path()
 	local file_path = vim.fn.expand("%:p")
 
-	if file_path:endswith(".php") == false then
+	if config.user_opts.check_file_extension and file_path:endswith(".php") == false then
 		return
 	end
 
