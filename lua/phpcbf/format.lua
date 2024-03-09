@@ -28,7 +28,7 @@ function format.format_phpcbf()
 		-- Add file path
 		table.insert(format_command, file_path)
 		-- Format file
-		vim.fn.system(format_command)
+		vim.fn.system(table.concat(format_command, " "))
 		-- Reload file
 		vim.cmd("e")
 		return
