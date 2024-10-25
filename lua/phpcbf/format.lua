@@ -20,17 +20,15 @@ function format.format_phpcbf()
 	if phpcbf_path then
 		-- Show message
 		print("formatting file ...")
-		local format_command = { phpcbf_path }
+		local command = { phpcbf_path }
 		-- Add ruleset if set
 		if config.user_opts.phpcbf_ruleset then
-			table.insert(format_command, "--standard=" .. config.user_opts.phpcbf_ruleset)
+			table.insert(command, "--standard=" .. config.user_opts.phpcbf_ruleset)
 		end
 		-- Add file path
-		table.insert(format_command, file_path)
-		-- Format file
-		vim.fn.system(table.concat(format_command, " "))
-		-- Reload file
-		vim.cmd("e")
+		table.insert(command, file_path)
+		-- Run the formatter
+		format.run(command)
 		return
 	end
 	-- No phpcbf
@@ -44,6 +42,18 @@ function format.auto_format_phpcbf()
 		return
 	end
 	format.format_phpcbf()
+end
+
+-- chdir to current file dir (so phpcbf can find the ruleset),
+-- then format and reload the file,
+-- then set cwd back to its starting value.
+function format.run(command)
+	local cwd = vim.fn.getcwd()
+	vim.cmd("set autochdir")
+	vim.system(command):wait()
+	vim.cmd("e")
+	vim.cmd("set autochdir!")
+	vim.cmd(table.concat({ "cd", cwd }, " "))
 end
 
 return format
